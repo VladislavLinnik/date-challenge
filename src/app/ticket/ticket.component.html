@@ -1,0 +1,4 @@
+<h1 class="title">Выберите дату концерта</h1>
+<input type="date" [(ngModel)]="concertDate" (input)="calculateTicket()" max="2021-12-31" min="2021-01-01">
+<h2 class="subtitle">Купить билет можно до: {{ buyDate | date: 'yyyy/MM/dd' }}</h2>
+<h2 class="subtitle">Сдать билет можно до: {{ returnDate | date: 'yyyy/MM/dd' }}</h2>

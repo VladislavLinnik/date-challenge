@@ -1,0 +1,11 @@
+.element {
+  margin: 10px auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }
+}

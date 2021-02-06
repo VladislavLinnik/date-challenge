@@ -1,0 +1,2 @@
+<h1 class="title">Выходных: {{ holidays ? holidays : '' }}</h1>
+<input type="month" [(ngModel)]="date" (input)="calculateWeekends()">
