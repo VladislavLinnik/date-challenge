@@ -1,5 +1,5 @@
-<h1 class="title">New Year {{ newYearDate.getFullYear() + 1}}</h1>
-<h2 class="subtitle">До Нового Года осталось: {{ timeLeft ? timeLeft : '' }}</h2>
+<h1 class="title">New Year {{ newYearDate.getFullYear() }}</h1>
+<h2 class="subtitle">До Нового Года 2021 осталось: {{ timeLeft ? timeLeft : '' }}</h2>
 <input class="input-date" type="datetime-local"
        [(ngModel)]="startedDate" step="1"
-       max="2020-12-31" min="2020-01-01">
+       max="2020-12-31T23:59:59" min="2020-01-01T00:00:00">

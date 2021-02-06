@@ -5,6 +5,10 @@
   justify-content: center;
   align-items: center;
 
+  &.approved {
+    background-color: rgba(0, 255, 0, .5);
+  }
+
   &:not(:last-child) {
     border-bottom: 1px solid #eee;
   }

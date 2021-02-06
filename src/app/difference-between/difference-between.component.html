@@ -1,4 +1,4 @@
-<h1 class="title">Разница в днях: {{ daysDifference ? daysDifference : 0 }}</h1>
+<h1 class="title">Разница в днях: {{ daysDifference ? daysDifference : '' }}</h1>
 <input type="date" [(ngModel)]="startDate" (input)="calculateDaysDifference()" max="9999-12-31">
 <input type="date" [(ngModel)]="endDate" (input)="calculateDaysDifference()" max="9999-12-31">
 <h4 *ngIf="errorMsg" class="error">{{ errorMsg }}</h4>

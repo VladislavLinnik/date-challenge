@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class DateOfBirthComponent implements OnInit {
   birthDate: string;
   age: string;
-  today = new Date(new Date().toLocaleDateString());
 
   constructor() { }
 
@@ -19,8 +18,12 @@ export class DateOfBirthComponent implements OnInit {
     if (new Date(this.birthDate).getTime() > new Date().getTime()) {
       this.age = 'Вы ещё не родились';
     } else {
-      this.age = Math.trunc((new Date(new Date().toLocaleDateString()).getTime() -
-        new Date(this.birthDate).getTime()) / (24 * 3600 * 365.25 * 1000)).toString();
+      if (this.birthDate) {
+        this.age = Math.trunc((new Date(new Date().toLocaleDateString()).getTime() -
+          new Date(this.birthDate).getTime()) / (24 * 3600 * 365.25 * 1000)).toString();
+      } else {
+        this.age = null;
+      }
     }
   }
 }
